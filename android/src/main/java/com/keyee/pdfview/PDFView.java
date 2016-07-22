@@ -15,7 +15,9 @@ public class PDFView implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Collections.emptyList();
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new PDFViewUtilManager(reactContext));
+        return modules;
     }
 
     @Override
